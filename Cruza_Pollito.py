@@ -17,6 +17,9 @@ AZUL_CIELO = (135, 206, 235)
 GRIS_OSCURO = (50, 50, 50)
 AMARILLO_LINEA = (255, 255, 0)
 VERDE = (0, 255, 0)
+rosa = (255, 182, 193)
+cafe = (139, 69, 19)
+celeste = (173, 216, 230)
 
 class Casa(pygame.sprite.Sprite):
     def __init__(self, x, y):
@@ -26,9 +29,7 @@ class Casa(pygame.sprite.Sprite):
         self.rect = self.image.get_rect(topleft=(x, y))
 
     def dibujar_casa(self):
-        rosa = (255, 182, 193)
-        cafe = (139, 69, 19)
-        celeste = (173, 216, 230)
+    
         pygame.draw.rect(self.image, rosa, (0, 10, 50, 50))
         pygame.draw.polygon(self.image, cafe, [(0, 10), (25, 0), (50, 10)])
         pygame.draw.rect(self.image, celeste, (10, 25, 10, 10))
